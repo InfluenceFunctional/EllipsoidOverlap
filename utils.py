@@ -2,8 +2,6 @@ import torch
 from scipy.spatial.transform import Rotation as R
 from tqdm import tqdm
 
-from generate_dataset import n_samples
-
 
 def sample_triangular_right(n_samples, start, stop, device='cpu'):
     """
@@ -21,8 +19,8 @@ def generate_random_eigenvalues(num_samples, device):
     """
 
     rands = torch.rand(num_samples, device=device).clip(min=0.5)
-    b_rands = sample_triangular_right(n_samples, 0, 1.1, device).clip(min=0.1, max=1)
-    c_rands = sample_triangular_right(n_samples, 0, 1.1, device).clip(min=0.1, max=1)
+    b_rands = sample_triangular_right(num_samples, 0, 1.1, device).clip(min=0.1, max=1)
+    c_rands = sample_triangular_right(num_samples, 0, 1.1, device).clip(min=0.1, max=1)
 
     a = rands
     b = a * b_rands

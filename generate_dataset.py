@@ -20,11 +20,11 @@ if __name__ == '__main__':
     chunk_ind = args.chunk_ind
 
     chunk_path = os.getcwd()
-    device = 'cuda'
-    n_samples = 10000
-    num_probes = 100000
-    min_iters = 5
-    max_iters = 1000
+    device = 'cpu'
+    n_samples = 100
+    num_probes = 10000
+    min_iters = 50
+    max_iters = 10000
     conv_eps = 1e-3
 
     """
