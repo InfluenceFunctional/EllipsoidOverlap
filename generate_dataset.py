@@ -18,13 +18,14 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     chunk_ind = args.chunk_ind
+    chunk_ind = 1
 
     chunk_path = os.getcwd()
-    device = 'cpu'
+    device = 'cuda'
     n_samples = 100
-    num_probes = 10000
-    min_iters = 50
-    max_iters = 10000
+    num_probes = 100000
+    min_iters = 5
+    max_iters = 1000
     conv_eps = 1e-3
 
     """
